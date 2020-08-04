@@ -1,44 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Кэт энерджи</title>
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>HTML Academy: Кэт энерджи</title>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
 
-<body>
-  <header class="header-page">
-    <a class="header-page__logo" href="#">
-      <img src="" alt="">
-    </a>
-    <div class="header-title__logo">
-      <img src="" alt="">
-    </div>
-    <nav class="header-nav">
-      <button class="header-nav__toggle" type="button">
-        <span class="visually-hidden">Открыть меню</span>
-      </button>
-      <div class="header-nav__wrapper">
-        <ul class="header-nav__list site-list">
-          <li class="site-list__item">
-            <a href="index.html">
-              Главная
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a href="catalog.html">
-              Каталог продукции
-            </a>
-          </li>
-          <li class="site-list__item">
-            <a>
-              Подбор программы
-            </a>
-          </li>
-        </ul>
+  <body>
+    <header class="header-page">
+      <div class="header-page__wrap">
+        <a class="header-page__logo" href="#">
+          <picture>
+            <img class="header-page__img-logo" src="./img/logo-mobile.svg" width="191" height="38"
+              alt="Логотип с котиком">
+          </picture>
+        </a>
       </div>
-    </nav>
-  </header>
+
+      <nav class="header-nav header-nav--closed  header-nav--no-js">
+        <button class="header-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="header-nav__wrapper">
+          <ul class="header-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="catalog.html">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link">
+                Подбор программы
+              </a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
 
   <main class="form-main">
     <section class="program-search">
@@ -114,7 +119,7 @@
           Витамины
         </label>
 
-        <button class="button-search" type="submit">Отправить заявку</button>
+        <button class="button-search button" type="submit">Отправить заявку</button>
 
         <small>* — Обязательные поля</small>
 

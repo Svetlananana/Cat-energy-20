@@ -1,0 +1,53 @@
+.slider {
+  position: relative;
+}
+.slider__wrap {
+  width: 320px;
+  height: 240px;
+
+  margin: 0 auto;
+  padding-top: 42px;
+}
+
+.slider__img-wrap {
+  position: absolute;
+}
+
+.slider__controls {
+  margin: 0;
+  padding: 0;
+
+  padding: 24px 0;
+
+  list-style: none;
+  display: flex;
+  justify-content: center;
+
+  border: none;
+}
+
+.slider__parameter {
+  border: none;
+  background: inherit;
+  font-family: inherit;
+
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  text-transform: uppercase; //прописать состояния. на телефоне они отличаются?
+}
+
+.slider__scale {
+  border: 1px solid @grey-border-value;
+  border-radius: 6px;
+  width: 84px;
+  height: 14px;
+
+  background-color: @white;
+
+  margin: 0 10px;
+}
+
+.slider__position {
+  margin-bottom: 25px;
+}

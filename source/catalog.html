@@ -1,43 +1,48 @@
 <!DOCTYPE html>
 <html lang="ru">
 
-<head>
+  <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>HTML Academy: Кэт энерджи</title>
-</head>
+    <link rel="stylesheet" href="./css/style.css">
+  </head>
 
-<body>
+  <body>
     <header class="header-page">
+      <div class="header-page__wrap">
         <a class="header-page__logo" href="#">
-            <img src="" alt="">
+          <picture>
+            <img class="header-page__img-logo" src="./img/logo-mobile.svg" width="191" height="38"
+              alt="Логотип с котиком">
+          </picture>
         </a>
-        <div class="header-title__logo">
-            <img src="" alt="">
+      </div>
+
+      <nav class="header-nav header-nav--closed  header-nav--no-js">
+        <button class="header-nav__toggle" type="button">
+          <span class="visually-hidden">Открыть меню</span>
+        </button>
+        <div class="header-nav__wrapper">
+          <ul class="header-nav__list site-list">
+            <li class="site-list__item">
+              <a class="site-list__link" href="index.html">
+                Главная
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link">
+                Каталог продукции
+              </a>
+            </li>
+            <li class="site-list__item">
+              <a class="site-list__link" href="form.html">
+                Подбор программы
+              </a>
+            </li>
+          </ul>
         </div>
-        <nav class="header-nav">
-            <button class="header-nav__toggle" type="button">
-                <span class="visually-hidden">Открыть меню</span>
-            </button>
-            <div class="header-nav__wrapper">
-                <ul class="header-nav__list site-list">
-                    <li class="site-list__item">
-                        <a href="index.html">
-                            Главная
-                        </a>
-                    </li>
-                    <li class="site-list__item">
-                        <a>
-                            Каталог продукции
-                        </a>
-                    </li>
-                    <li class="site-list__item">
-                        <a href="form.html">
-                            Подбор программы
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
+      </nav>
     </header>
 
     <main class="list-main">
@@ -59,7 +64,7 @@
                     <td>700 Р.</td>
                 </tr>
             </table>
-            <a class="button-search" href="">Зказать</a>
+            <a class="button-search button" href="">Заказать</a>
         </article>
 
         <article class="catalog-list">
@@ -79,7 +84,7 @@
                     <td>1000 Р.</td>
                 </tr>
             </table>
-            <a class="button-search" href="">Зказать</a>
+            <a class="button-search button" href="#">Заказать</a>
         </article>
 
         <article class="catalog-list">
@@ -99,7 +104,7 @@
                     <td>700 Р.</td>
                 </tr>
             </table>
-            <a class="button-search" href="">Зказать</a>
+            <a class="button-search button" href="#">Заказать</a>
         </article>
 
         <article class="catalog-list">
@@ -119,7 +124,7 @@
                     <td>1000 Р.</td>
                 </tr>
             </table>
-            <a class="button-search" href="">Зказать</a>
+            <a class="button-search button" href="#">Заказать</a>
         </article>
 
         <article class="catalog-list">
@@ -139,7 +144,7 @@
                     <td>400 Р.</td>
                 </tr>
             </table>
-            <a class="button-search" href="">Зказать</a>
+            <a class="button-search button" href="#">Заказать</a>
         </article>
 
         <article class="catalog-list">
@@ -159,7 +164,7 @@
                     <td>700 Р.</td>
                 </tr>
             </table>
-            <a class="button-search" href="">Зказать</a>
+            <a class="button-search button" href="#">Заказать</a>
         </article>
 
         <article class="catalog-list">
@@ -179,14 +184,13 @@
                     <td>500 Р.</td>
                 </tr>
             </table>
-            <a class="button-search" href="">Зказать</a>
+            <a class="button-search" href="#">Заказать</a>
         </article>
 
-        <section class="search-catalog">
-            <a href=""> <img src="" alt=""></a>
-            <h3>Показать ещё 100500 товаров</h3>
-            <p>На самом деле вкусов гораздо больше!</p>
-            <a class="button-search button-search-all" href="">Зказать</a>
+        <section class="search-catalog search-catalog__wrap">
+            <h3 class="search-catalog__title">Показать ещё 100500 товаров</h3>
+            <p class="search-catalog__text">На самом деле вкусов гораздо больше!</p>
+            <a class="button-search button--gray" href="#">Заказать</a>
 
         </section>
 
@@ -199,7 +203,7 @@
                     <tr>1 упаковка (100 г)</tr>
                     <td>200 Р.</td>
                 </table>
-                <a class="button-search" href="">Зказать</a>
+                <a class="button-search button" href="#">Заказать</a>
             </article>
 
             <article class="search-extra__list">
@@ -208,7 +212,7 @@
                     <tr>5 литров</tr>
                     <td>50 Р.</td>
                 </table>
-                <a class="button-search" href="">Зказать</a>
+                <a class="button-search button" href="#">Заказать</a>
             </article>
 
             <article class="search-extra__list">
@@ -217,7 +221,7 @@
                     <tr>1 литр</tr>
                     <td>100 Р.</td>
                 </table>
-                <a class="button-search" href="">Зказать</a>
+                <a class="button-search button" href="#">Заказать</a>
             </article>
 
             <article class="search-extra__list">
@@ -226,7 +230,7 @@
                     <tr>1 упаковка (30 г)</tr>
                     <td>300 Р.</td>
                 </table>
-                <a class="button-search" href="">Зказать</a>
+                <a class="button-search button" href="#">Заказать</a>
             </article>
         </section>
 
