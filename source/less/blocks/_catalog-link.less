@@ -1,13 +1,17 @@
 .catalog-link {
   position: relative;
 
-  margin-bottom: 20px;
+  margin: 0 20px;
   padding-top: 30px;
   padding-left: 20px;
   padding-right: 20px;
 
   background-color: @basic-grey;
   min-height: 266px;
+}
+
+.catalog-link:not(:last-child) {
+  margin-bottom: 20px;
 }
 
 .catalog-link__titlel {
@@ -22,7 +26,7 @@
 }
 
 .catalog-link__description {
-  font-family: 'Arial';
+  font-family: @arial;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
@@ -37,13 +41,13 @@
 .catalog-link__button {
   position: relative;
 
-   &:active {
+  &:active {
     color: rgba(0, 0, 0, 0.3);
   }
 
   &::after {
     position: absolute;
-    content: '';
+    content: "";
 
     top: 6px;
     margin-left: 17px;
@@ -51,7 +55,7 @@
     width: 24px;
     height: 12px;
 
-    background-image: url(../../img/icon-right-arrow-long.svg);
+    background-image: url("../../img/icon-right-arrow-long.svg");
     background-repeat: no-repeat;
   }
 
@@ -59,8 +63,8 @@
   &:focus::after {
     width: 32px;
 
-    background-image: url('../../img/icon-right-arrow-verylong.svg');
-    transition: .1s ease-in-out;
+    background-image: url("../../img/icon-right-arrow-verylong.svg");
+    transition: 0.1s ease-in-out;
   }
 
   &:active::after {
