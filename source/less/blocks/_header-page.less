@@ -1,0 +1,22 @@
+.header-page__wrap {
+  background-color: @white;
+  color: @black;
+
+  border-bottom: 1px solid @grey-border;
+
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-bottom: 17px;
+}
+
+.header-page__img-logo {
+  width: 191px;
+  height: 38px;
+}
+
+.header-page__logo {
+  &[href]:hover .header-page__img-logo,
+  &[hres]:focus .header-page__img-logo {
+    opacity: 0.8;
+  }
+}

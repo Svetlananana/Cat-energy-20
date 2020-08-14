@@ -1,0 +1,72 @@
+.header-nav__toggle {
+  position: absolute;
+  z-index: 2;
+
+  border: none;
+  background-color: inherit;
+  cursor: pointer;
+
+  top: 0;
+  right: 0;
+
+  width: 64px;
+  height: 64px;
+}
+
+/* Бургер */
+.header-nav--closed .header-nav__toggle::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  right: 20px;
+
+  width: 24px;
+  height: 2px;
+
+  background-color: @black;
+  box-shadow: 0 8px 0 0 #000000, 0 16px 0 0 #000000;
+}
+
+.header-nav--closed .header-nav__toggle:active::before {
+  background-color: fade(@black, 30%);
+  box-shadow: 0 8px 0 0 fade(#000000, 30%), 0 16px 0 0 fade(#000000, 30%);
+}
+
+/* Иконка закрытия меню */
+.header-nav--opened .header-nav__toggle {
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: 31px;
+    right: 23px;
+
+    width: 24px;
+    height: 2px;
+
+    background-color: @black;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+  }
+
+  &:active::before,
+  &:active::after {
+    background-color: fade(@black, 30%);
+  }
+}
+
+@media (max-width: @mobile-width-only) {
+  .header-nav--closed .site-list__item {
+    display: none;
+  }
+}
+
+/*.header-nav--no-js .header-nav__toggle {
+  display: none;
+}*/
