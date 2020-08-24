@@ -1,0 +1,222 @@
+.personal {
+  border: none;
+  font-family: @basic-fonts;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+
+  text-transform: uppercase;
+  color: @special-dark-grey;
+
+  padding: 39px 20px 12px 20px;
+  margin: 0;
+  min-width: 280px;
+
+  display: flex;
+}
+
+//field
+
+.personal__wrap {
+  //display: flex;
+  //justify-content: flex-start;
+  //align-items: baseline;
+  padding-bottom: 15px;
+  //flex-wrap: nowrap;
+}
+
+.personal__field-name,
+.personal__field-weight,
+.personal__field-age {
+  .input__text;
+  margin-left: 15px;
+  padding: 12px 0 12px 15px;
+}
+
+//radio
+
+.personal__tipe {
+  position: relative;
+  display: flex;
+
+  border: none;
+  font-family: @basic-fonts;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+
+  text-transform: uppercase;
+  color: @special-dark-grey;
+
+  padding: 20px 20px 22px 20px;
+  margin: 0;
+
+  border-top: 1px solid @grey-border;
+  border-bottom: 1px solid @grey-border;
+}
+
+.personal__radio:not(:last-child) {
+  padding-bottom: 12px;
+}
+
+//contact
+
+.personal__contact {
+  border: none;
+  display: flex;
+  flex-direction: column;
+
+  margin: 0;
+  padding-top: 26px;
+  padding-left: 19px;
+  padding-right: 20px;
+}
+
+.personal__contact-title {
+  position: relative;
+  font-family: @basic-fonts;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+
+  margin: 0;
+  padding-bottom: 32px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    background-color: @basic-green;
+    width: 200%;
+    height: 2px;
+
+    top: 15px;
+    left: 203px; //смущает меня эта полоса, она наезжает на текст если заголовок будет длинней
+  }
+}
+
+.personal__contact-form {
+  font-family: @basic-fonts;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  color: @special-dark-grey;
+}
+
+.personal__contact-email,
+.personal__contact-tel {
+  .input__text;
+  padding: 12px 0 12px 15px;
+  width: 70%;
+}
+
+.personal__contact-email {
+  margin-bottom: 14px;
+  margin-left: 12px;
+}
+
+.personal__contact-tel {
+  margin-left: 9px;
+}
+
+//comment
+
+.personal__comment {
+  margin-left: 20px;
+}
+
+.personal__comment-title {
+  position: relative;
+  font-family: @basic-fonts;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+
+  padding: 0 20px;
+  padding-bottom: 24px;
+  margin: 0;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: @basic-green;
+    width: 200%;
+    height: 2px;
+
+    top: 15px;
+    left: 175px;
+  }
+}
+
+.personal__comment-field {
+  border: 1px solid @grey-border;
+  min-width: 280px;
+  min-height: 150px;
+
+  margin: 0 20px;
+  padding-top: 13px;
+  padding-left: 15px;
+
+  font-family: @basic-fonts;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @special-dark-grey;
+}
+
+//add
+
+.personal__add {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.personal__add-title {
+  font-family: @basic-fonts;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 34px;
+}
+
+.personal__checkbox {
+  font-family: @basic-fonts;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+
+.personal__checkbox:not(:last-child) {
+  padding-bottom: 12px;
+}
+
+//personal__submit
+
+.personal__submit {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 34px 20px 32px;
+}
+
+.personal__submit-button {
+  .button;
+  //margin-top: 34px;
+}
+
+.personal__submit-text {
+  font-family: @arial;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+
+  padding-top: 21px;
+}
