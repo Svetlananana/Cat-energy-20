@@ -1,3 +1,5 @@
+//field
+
 .personal {
   border: none;
   font-family: @basic-fonts;
@@ -8,29 +10,41 @@
   text-transform: uppercase;
   color: @special-dark-grey;
 
-  padding: 39px 20px 12px 20px;
+  padding: 39px 20px 12px 19px;
   margin: 0;
   min-width: 280px;
 
   display: flex;
 }
 
-//field
-
 .personal__wrap {
   //display: flex;
   //justify-content: flex-start;
   //align-items: baseline;
   padding-bottom: 15px;
-  //flex-wrap: nowrap;
 }
 
 .personal__field-name,
 .personal__field-weight,
 .personal__field-age {
   .input__text;
-  margin-left: 15px;
-  padding: 12px 0 12px 15px;
+  margin-left: 12px;
+  padding-left: 15px;
+}
+
+.personal__field-name {
+  width: 227px;
+  height: 45px;
+}
+
+.personal__field-weight {
+  width: 205px;
+  height: 45px;
+}
+
+.personal__field-age {
+  width: 172px;
+  height: 45px;
 }
 
 //radio
@@ -48,7 +62,7 @@
   text-transform: uppercase;
   color: @special-dark-grey;
 
-  padding: 20px 20px 22px 20px;
+  padding: 27px 20px 29px 20px;
   margin: 0;
 
   border-top: 1px solid @grey-border;
@@ -56,7 +70,55 @@
 }
 
 .personal__radio:not(:last-child) {
-  padding-bottom: 12px;
+  padding-bottom: 25px;
+}
+
+.personal__radio {
+  padding-left: 45px;
+}
+
+.personal__radio-tipe + .personal__radio::before {
+  .radio;
+  top: 21px;
+  left: 20px;
+}
+
+.personal__radio-weight + .personal__radio::before {
+  .radio;
+  top: 64px;
+  left: 20px;
+}
+
+.personal__radio-option + .personal__radio::before {
+  .radio;
+  top: 107px;
+  left: 20px;
+}
+
+.personal__radio-shape:checked + .personal__radio::after {
+  content: "";
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  background-color: @basic-green;
+  border-radius: 50%;
+  left: 26px;
+}
+
+.personal__radio-shape:disabled + .personal__radio::after {
+  background-color: rgba(59, 183, 56, 0.3);
+}
+
+.personal__radio-shape:hover + .personal__radio::before {
+  border-color: rgb(186, 186, 186);
+}
+
+.personal__radio-shape:focus + .personal__radio::before {
+  border-color: rgb(186, 186, 186);
+}
+
+.personal__radio-shape:disabled + .personal__radio::before {
+  border-color: rgba(186, 186, 186, 0.3);
 }
 
 //contact
@@ -82,20 +144,23 @@
   margin: 0;
   padding-bottom: 32px;
 
+  width: 187px;
+
   &::before {
     content: "";
     position: absolute;
     z-index: -1;
     background-color: @basic-green;
-    width: 200%;
+    width: 1000%;
     height: 2px;
 
     top: 15px;
-    left: 203px; //смущает меня эта полоса, она наезжает на текст если заголовок будет длинней
+    left: 203px;
   }
 }
 
 .personal__contact-form {
+  position: relative;
   font-family: @basic-fonts;
   font-weight: normal;
   font-size: 16px;
@@ -108,17 +173,44 @@
 .personal__contact-email,
 .personal__contact-tel {
   .input__text;
-  padding: 12px 0 12px 15px;
-  width: 70%;
+  padding-left: 15px;
 }
 
 .personal__contact-email {
+  width: 219px;
+  height: 45px;
+
   margin-bottom: 14px;
-  margin-left: 12px;
+  margin-left: 9px;
 }
 
 .personal__contact-tel {
-  margin-left: 9px;
+  margin-left: 7px;
+  width: 204px;
+  height: 45px;
+}
+
+.personal__svg-email {
+  position: absolute;
+  top: 16px;
+  left: 245px;
+}
+
+.personal__svg-tel {
+  position: absolute;
+  top: 13px;
+  left: 247px;
+}
+
+.personal__contact-form .personal__svg-email{
+  &:focus,
+  &:active {
+  fill: @basic-green;
+  outline: 0;
+  }
+  &:invalid {
+    fill: @invalid;
+  }
 }
 
 //comment
@@ -153,7 +245,8 @@
 .personal__comment-field {
   border: 1px solid @grey-border;
   min-width: 280px;
-  min-height: 150px;
+  height: 150px;
+  resize: none;
 
   margin: 0 20px;
   padding-top: 13px;
@@ -176,6 +269,7 @@
 }
 
 .personal__add-title {
+  position: relative;
   font-family: @basic-fonts;
   font-weight: normal;
   font-size: 24px;
@@ -184,6 +278,17 @@
   margin: 0;
   padding-top: 27px;
   padding-bottom: 34px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    background-color: @basic-green;
+    width: 200%;
+    height: 2px;
+
+    top: 40px;
+    left: 173px;
+  }
 }
 
 .personal__checkbox {
