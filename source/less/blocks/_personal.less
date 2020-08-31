@@ -105,15 +105,7 @@
 
 //contact
 
-.personal__contact {
-  border: none;
-  display: flex;
-  flex-direction: column;
-
-  margin: 0;
-  padding-top: 26px;
-  padding-left: 19px;
-  padding-right: 20px;
+.personal__contact-wrap {
   width: 100%;
 
   &--line {
@@ -124,12 +116,35 @@
       position: absolute;
       z-index: -1;
       background-color: @basic-green;
-      width: 98%;
+      width: 100%;
       height: 2px;
 
       top: 44px;
     }
   }
+}
+
+.personal__contact {
+  border: none;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+
+  /*&--line {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-color: @basic-green;
+      width: 94%;
+      height: 2px;
+
+      top: 44px;
+    }
+  }*/
 }
 
 .personal__contact-title {
@@ -141,9 +156,11 @@
   background-color: @white;
 
   margin: 0;
+  padding-top: 26px;
   padding-bottom: 32px;
+  padding-left: 19px;
 
-  max-width: 205px;
+  max-width: 220px;
 }
 
 .personal__contact-form {
@@ -155,6 +172,9 @@
   text-transform: uppercase;
 
   color: @special-dark-grey;
+
+  padding-left: 19px;
+  padding-right: 20px;
 }
 
 .personal__contact-email,
@@ -180,13 +200,13 @@
 .personal__svg-email {
   position: absolute;
   top: 16px;
-  left: 245px;
+  left: 265px;
 }
 
 .personal__svg-tel {
   position: absolute;
   top: 13px;
-  left: 247px;
+  left: 267px;
 }
 
 .personal__contact-form:focus + .personal__svg-email {
@@ -220,7 +240,7 @@
       width: 100%;
       height: 2px;
 
-      top: 32px;
+      top: 43px;
     }
   }
 }
@@ -237,8 +257,10 @@
   background-color: @white;
 
   padding: 0 20px;
-  padding-bottom: 24px;
+  padding-bottom: 34px;
+  padding-top: 10px;
   margin: 0;
+
   max-width: 160px;
 }
 
@@ -262,17 +284,14 @@
 
 //add
 
-.personal__add {
-  padding: 0 20px;
-  display: flex;
-  flex-direction: column;
-
+.personal__add-wrap {
   width: 100%;
 
   &--line {
     position: relative;
 
     &::before {
+      position: absolute;
       content: "";
       position: absolute;
       z-index: -1;
@@ -285,6 +304,12 @@
   }
 }
 
+.personal__add {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+}
+
 .personal__add-title {
   position: relative;
   font-family: @basic-fonts;
@@ -293,10 +318,11 @@
   line-height: 26px;
   background-color: @white;
 
-  max-width: 161px;
+  max-width: 185px;
   margin: 0;
   padding-top: 27px;
   padding-bottom: 39px;
+  padding-left: 19px;
 }
 
 .personal__checkbox {
