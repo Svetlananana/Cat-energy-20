@@ -71,24 +71,25 @@
 
       </fieldset>
 
-      <fieldset class="personal__tipe">
+      <fieldset class="personal__radio-tipe">
 
-        <input class="personal__radio-tipe personal__radio-shape visually-hidden" name="select-weight__radio" id="slim"
-          type="radio" checked disabled>
-        <!--нужно ли показывать состояние через дисейбл?-->
-        <label class="personal__radio" for="slim">Похудение</label>
+        <label class="personal__radio">
+          <input class="personal__radio-slim personal__radio-shape visually-hidden" name="select-weight__radio"
+            type="radio" checked><span class="personal__radio-button"></span>Похудение</label>
 
-        <input class="personal__radio-weight personal__radio-shape visually-hidden" name="select-weight__radio"
-          id="weight" type="radio">
-        <label class="personal__radio" for="weight">Набор массы</label>
+        <label class="personal__radio">
+          <input class="personal__radio-weight personal__radio-shape visually-hidden" name="select-weight__radio"
+            type="radio"><span class="personal__radio-button"></span>Набор массы
         </label>
 
-        <input class="personal__radio-option personal__radio-shape visually-hidden" name="select-weight__radio"
-          id="light" type="radio" disabled>
-        <label class="personal__radio" for="light">Не знаю (нужен ваш совет)</label>
+        <label class="personal__radio">
+          <input class=" personal__radio-option personal__radio-shape visually-hidden" name="select-weight__radio"
+            type="radio">
+          <span class="personal__radio-button"></span>Не знаю (нужен ваш совет)</label>
+
       </fieldset>
 
-      <fieldset class="personal__contact">
+      <fieldset class="personal__contact personal__contact--line">
         <h2 class="personal__contact-title">Контактные данные (владельца кота)</h2>
         <label class="personal__contact-form">E-mail:<sup>*</sup>
           <input class="personal__contact-email" type="email" value="kuklachev@gmail.com"
@@ -121,29 +122,34 @@
         </label>
       </fieldset>
 
-      <fildset class="personal__comment">
-        <h3 class="personal__comment-title">Комментарий</h3>
-        <textarea class="personal__comment-field" name="field" cols="30"
-          rows="10">Расскажите обо всех повадках кота</textarea>
-      </fildset>
+      <div class="personal__comment-wrap personal__comment-wrap--line">
+        <fildset class="personal__comment">
+          <h3 class="personal__comment-title">Комментарий</h3>
+          <textarea class="personal__comment-field" name="field" cols="30"
+            rows="10">Расскажите обо всех повадках кота</textarea>
+        </fildset>
+      </div>
 
-      <fildset class="personal__add">
+      <fildset class="personal__add personal__add--line">
         <h3 class="personal__add-title">Дополнительно</h3>
 
         <label class="personal__checkbox">
-          <input class="personal__add-sweetener visually-hidden" type="checkbox" checked>
-          Сахарозаменитель
+          <input class="personal__add-input visually-hidden" type="checkbox" checked>
+          <span class="personal__checkbox-button"></span>Сахарозаменитель
         </label>
         <label class="personal__checkbox ">
-          <input class="personal__add-water visually-hidden" type="checkbox">
+          <input class="personal__add-input visually-hidden" type="checkbox">
+          <span class="personal__checkbox-button"></span>
           Питьевая вода
         </label>
         <label class="personal__checkbox">
-          <input class="personal__add-milk visually-hidden" type="checkbox">
+          <input class="personal__add-input visually-hidden" type="checkbox">
+          <span class="personal__checkbox-button"></span>
           Молоко
         </label>
         <label class="personal__checkbox">
-          <input class="personal__add-vitamins visually-hidden" type="checkbox">
+          <input class="personal__add-input visually-hidden" type="checkbox">
+          <span class="personal__checkbox-button"></span>
           Витамины
         </label>
       </fildset>

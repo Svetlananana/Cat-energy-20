@@ -56,22 +56,22 @@
 
   &:focus,
   &:active {
-    border: 2px solid @special-dark-grey;
+    border: 1px solid @special-dark-grey;
+    box-shadow: 0 0 0 1px @black;
     outline: 0;
   }
 
   &:invalid {
-    border: 2px solid @invalid;
+    border: 1px solid @invalid;
+    box-shadow: 0 0 0 1px @invalid;
   }
 }
 
 .radio {
-  position: absolute;
-  content: "";
   cursor: pointer;
-  width: 30px;
-  height: 30px;
-  border: 1px solid @grey-border-value;
+  width: 29px;
+  height: 29px;
   background-color: @white;
+  box-shadow: 0 0 0 1px @grey-border-value;
   border-radius: 50%;
 }

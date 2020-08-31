@@ -18,9 +18,6 @@
 }
 
 .personal__wrap {
-  //display: flex;
-  //justify-content: flex-start;
-  //align-items: baseline;
   padding-bottom: 15px;
 }
 
@@ -49,8 +46,7 @@
 
 //radio
 
-.personal__tipe {
-  position: relative;
+.personal__radio-tipe {
   display: flex;
 
   border: none;
@@ -69,56 +65,42 @@
   border-bottom: 1px solid @grey-border;
 }
 
-.personal__radio:not(:last-child) {
-  padding-bottom: 25px;
-}
-
 .personal__radio {
+  position: relative;
   padding-left: 45px;
+
+  &:not(:last-child) {
+    padding-bottom: 25px;
+  }
 }
 
-.personal__radio-tipe + .personal__radio::before {
-  .radio;
-  top: 21px;
-  left: 20px;
-}
-
-.personal__radio-weight + .personal__radio::before {
-  .radio;
-  top: 64px;
-  left: 20px;
-}
-
-.personal__radio-option + .personal__radio::before {
-  .radio;
-  top: 107px;
-  left: 20px;
-}
-
-.personal__radio-shape:checked + .personal__radio::after {
-  content: "";
+.personal__radio-button {
   position: absolute;
-  width: 18px;
-  height: 18px;
-  background-color: @basic-green;
+  .radio;
+  left: 0;
+  top: -5px;
+}
+
+.personal__radio-shape:checked + .personal__radio-button {
+  width: 29px;
+  height: 29px;
+  border: 7px solid @white;
   border-radius: 50%;
-  left: 26px;
+  box-shadow: 0 0 0 1px @grey-border-value;
+  background-color: @basic-green;
 }
 
-.personal__radio-shape:disabled + .personal__radio::after {
-  background-color: rgba(59, 183, 56, 0.3);
+.personal__radio-shape:focus + .personal__radio-button,
+.personal__radio-shape:hover + .personal__radio-button {
+  box-shadow: 0 0 0 1px rgb(186, 186, 186);
 }
 
-.personal__radio-shape:hover + .personal__radio::before {
-  border-color: rgb(186, 186, 186);
+.personal__radio-shape:disabled + .personal__radio-button {
+  box-shadow: 0 0 0 1px rgba(186, 186, 186, 0.3);
 }
 
-.personal__radio-shape:focus + .personal__radio::before {
-  border-color: rgb(186, 186, 186);
-}
-
-.personal__radio-shape:disabled + .personal__radio::before {
-  border-color: rgba(186, 186, 186, 0.3);
+.personal__radio:active {
+  opacity: 0.3;
 }
 
 //contact
@@ -132,6 +114,22 @@
   padding-top: 26px;
   padding-left: 19px;
   padding-right: 20px;
+  width: 100%;
+
+  &--line {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-color: @basic-green;
+      width: 98%;
+      height: 2px;
+
+      top: 44px;
+    }
+  }
 }
 
 .personal__contact-title {
@@ -140,23 +138,12 @@
   font-weight: normal;
   font-size: 24px;
   line-height: 26px;
+  background-color: @white;
 
   margin: 0;
   padding-bottom: 32px;
 
-  width: 187px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    z-index: -1;
-    background-color: @basic-green;
-    width: 1000%;
-    height: 2px;
-
-    top: 15px;
-    left: 203px;
-  }
+  max-width: 205px;
 }
 
 .personal__contact-form {
@@ -202,10 +189,11 @@
   left: 247px;
 }
 
-.personal__contact-form .personal__svg-email {
-  //ghjk
-
-  &:focus,
+.personal__contact-form:focus + .personal__svg-email {
+  fill: @basic-green;
+  outline: 0;
+}
+/*&:focus,
   &:active {
     fill: @basic-green;
     outline: 0;
@@ -214,35 +202,44 @@
   &:invalid {
     fill: @invalid;
   }
-}
+}*/
 
 //comment
+
+.personal__comment-wrap {
+  width: 100%;
+
+  &--line {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-color: @basic-green;
+      width: 100%;
+      height: 2px;
+
+      top: 32px;
+    }
+  }
+}
 
 .personal__comment {
   margin-left: 20px;
 }
 
 .personal__comment-title {
-  position: relative;
   font-family: @basic-fonts;
   font-weight: normal;
   font-size: 24px;
   line-height: 26px;
+  background-color: @white;
 
   padding: 0 20px;
   padding-bottom: 24px;
   margin: 0;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background-color: @basic-green;
-    width: 200%;
-    height: 2px;
-
-    top: 15px;
-    left: 175px;
-  }
+  max-width: 160px;
 }
 
 .personal__comment-field {
@@ -269,6 +266,23 @@
   padding: 0 20px;
   display: flex;
   flex-direction: column;
+
+  width: 100%;
+
+  &--line {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: -1;
+      background-color: @basic-green;
+      width: 100%;
+      height: 2px;
+
+      top: 43px;
+    }
+  }
 }
 
 .personal__add-title {
@@ -277,33 +291,63 @@
   font-weight: normal;
   font-size: 24px;
   line-height: 26px;
+  background-color: @white;
 
+  max-width: 161px;
   margin: 0;
   padding-top: 27px;
-  padding-bottom: 34px;
-
-  &::before {
-    content: "";
-    position: absolute;
-    background-color: @basic-green;
-    width: 200%;
-    height: 2px;
-
-    top: 40px;
-    left: 173px;
-  }
+  padding-bottom: 39px;
 }
 
 .personal__checkbox {
+  position: relative;
   font-family: @basic-fonts;
   font-weight: normal;
   font-size: 16px;
   line-height: 18px;
   text-transform: uppercase;
+
+  padding-left: 46px;
 }
 
 .personal__checkbox:not(:last-child) {
-  padding-bottom: 12px;
+  padding-bottom: 25px;
+}
+
+.personal__checkbox-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @grey-border-value;
+
+  margin-left: -46px;
+  top: -5px;
+}
+
+.personal__add-input:checked + .personal__checkbox-button::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  width: 11px;
+  height: 18px;
+  border-right: 2px solid @basic-green;
+  border-bottom: 2px solid @basic-green;
+  transform: skew(5deg) rotate(45deg);
+}
+
+.personal__add-input:hover + .personal__checkbox-button,
+.personal__add-input:focus + .personal__checkbox-button {
+  border-color: rgb(186, 186, 186);
+}
+
+.personal__add-input:active + .personal__checkbox-button {
+  text-color: @basic-green;
+  border-color: rgba(186, 186, 186, 0.3);
+}
+
+.personal__checkbox:active {
+  opacity: 0.3;
 }
 
 //personal__submit
@@ -312,12 +356,11 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 34px 20px 32px;
+  padding: 41px 20px 32px;
 }
 
 .personal__submit-button {
   .button;
-  //margin-top: 34px;
 }
 
 .personal__submit-text {
