@@ -23,6 +23,42 @@
   padding-left: 71px;
   margin: 0;
   padding-bottom: 29px;
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    background-color: @basic-green;
+
+    top: 24px;
+    left: 22px;
+  }
+
+  &--slim::after {
+    content: "";
+    position: absolute;
+    background-image: url("./../../img/icon-cat-slim.svg");
+    background-repeat: no-repeat;
+    width: 36px;
+    height: 50px;
+
+    top: 21px;
+    left: 29px;
+  }
+
+  &--plus::after {
+    content: "";
+    position: absolute;
+    background-image: url("./../../img/icon-cat-pro.svg");
+    background-repeat: no-repeat;
+    width: 67px;
+    height: 28px;
+
+    left: 13px;
+    top: 35px;
+  }
 }
 
 .catalog-link__description {

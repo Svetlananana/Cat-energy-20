@@ -17,4 +17,61 @@
 
   color: @white;
   background-color: @basic-green;
+
+  &:hover {
+    background-color: @special-green;
+  }
+
+  &:active {
+    background-color: @special-green;
+    color: rgba(255, 255, 255, 0.3);
+  }
+}
+
+.title {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  color: @black;
+
+  margin: 0;
+  padding-top: 27px;
+  padding-left: 20px;
+}
+
+.input__text {
+  border: 1px solid rgb(231, 231, 231);
+
+  font-family: @basic-fonts;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: @special-dark-grey;
+
+  &:hover {
+    border: 1px solid @grey-border-value;
+    outline: 0;
+  }
+
+  &:focus,
+  &:active {
+    border: 1px solid @special-dark-grey;
+    box-shadow: 0 0 0 1px @black;
+    outline: 0;
+  }
+
+  &:invalid {
+    border: 1px solid @invalid;
+    box-shadow: 0 0 0 1px @invalid;
+  }
+}
+
+.radio {
+  cursor: pointer;
+  width: 29px;
+  height: 29px;
+  background-color: @white;
+  box-shadow: 0 0 0 1px @grey-border-value;
+  border-radius: 50%;
 }
