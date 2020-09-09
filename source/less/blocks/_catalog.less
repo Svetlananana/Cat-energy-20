@@ -246,8 +246,8 @@
   }
 }
 
-.catalog__card-plus:before,
-.catalog__card-plus:after {
+.catalog__card-plus::before,
+.catalog__card-plus::after {
   position: absolute;
   content: "";
   height: 30px;
@@ -258,6 +258,7 @@
     height: 60px;
   }
 }
-.catalog__card-plus:before {
+
+.catalog__card-plus::before {
   transform: rotate(90deg);
 }
