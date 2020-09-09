@@ -1,9 +1,18 @@
 .example {
   background-color: @special-grey;
+
+  @media (min-width: @tablet) {
+    border-top: 1px solid rgb(230, 230, 230);
+    background: linear-gradient(to bottom, @white 57%, @basic-grey 57%);
+  }
 }
 
 .example__wrap {
   padding: 0 20px;
+
+  @media (min-width: @tablet) {
+    padding: 0 30px;
+  }
 }
 
 .example__title {
@@ -13,13 +22,28 @@
 
   margin: 0;
   padding: 27px 0 33px;
+
+  @media (min-width: @tablet) {
+    font-size: 60px;
+    line-height: 60px;
+
+    padding: 43px 0 63px;
+  }
 }
 
 .example__description {
   font-family: @arial;
+  color: @special-dark-grey;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
 
   margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 24px;
+
+    padding-right: 10px;
+  }
 }

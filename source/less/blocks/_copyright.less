@@ -1,8 +1,10 @@
 .copyright {
-  /*display: flex;
-  justify-content: space-between;
-  align-items: center;*/
   padding: 22px 19px;
+
+  @media (min-width: @tablet) {
+    padding: 0;
+    margin: 0;
+  }
 }
 
 .copyright__link {
@@ -17,4 +19,25 @@
   align-items: center;
 
   color: @special-dark-grey;
+
+  &:active {
+    color: rgba(68, 68, 68, 0.3);
+  }
+
+  &-icon {
+    fill: @special-grey-icon;
+  }
+
+  &-icon:hover {
+    fill: @basic-green;
+  }
+
+  &-icon:active {
+    fill: @basic-green;
+    opacity: 0.3;
+  }
+
+  @media (min-width: @tablet) {
+    width: 163px;
+  }
 }

@@ -1,6 +1,4 @@
-.extra {
-padding-top: 28px;
-
+.extra__wrap {
   width: 100%;
 
   &--line {
@@ -15,12 +13,12 @@ padding-top: 28px;
       height: 2px;
 
       top: 44px;
+
+      @media (min-width: @tablet) {
+        top: 31px;
+      }
     }
   }
-}
-
-.extra-wrap {
-  border-bottom: 1px solid @grey-border;
 }
 
 .extra__title {
@@ -38,12 +36,43 @@ padding-top: 28px;
 
   padding-left: 20px;
   padding-bottom: 35px;
+  padding-top: 28px;
   margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 36px;
+    line-height: 36px;
+
+    width: 411px;
+
+    padding-top: 8px;
+    padding-bottom: 80px;
+    padding-left: 37px;
+    margin-left: 37px;
+  }
 }
 
 .extra__list {
   border-bottom: 1px solid @grey-border;
   margin: 0 20px;
+
+  @media (min-width: @tablet) {
+    border-bottom: 1px solid @grey-border;
+    border-left: 1px solid @grey-border;
+    border-right: 1px solid @grey-border;
+
+    margin: 0 30px;
+    padding: 26px 38px 0 37px;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: space-between;
+  }
+}
+
+.extra__list:first-of-type {
+  border-top: 1px solid @grey-border;
 }
 
 .extra__name {
@@ -52,9 +81,18 @@ padding-top: 28px;
   font-size: 16px;
   line-height: 16px;
   text-transform: uppercase;
+  color: @special-grey-catalog;
 
   margin: 0;
   padding: 13px 0;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 20px;
+
+    padding: 0;
+    padding-bottom: 28px;
+  }
 }
 
 .extra__table {
@@ -68,15 +106,38 @@ padding-top: 28px;
   color: @special-dark-grey;
 
   margin-bottom: 15px;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 20px;
+
+    display: flex;
+    justify-content: flex-end;
+
+    margin: 0;
+    padding-top: 4px;
+    padding-bottom: 24px;
+  }
 }
 
 .extra__table-parameters {
   display: flex;
   justify-content: space-between;
   min-width: 280px;
+
+  @media (min-width: @tablet) {
+   min-width: 226px;
+  }
 }
 
 .extra__button {
   .button;
   margin-bottom: 19px;
+
+  @media (min-width: @tablet) {
+    width: 100%;
+
+    padding: 11px 0 11px;
+    margin-bottom: 28px;
+  }
 }

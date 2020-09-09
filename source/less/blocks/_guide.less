@@ -1,28 +1,152 @@
 .guide {
   padding: 0 20px 20px;
-}
 
-.guide__title {
-  margin: 0;
-  padding-top: 7px;
-  padding-bottom: 38px;
-
-  font-weight: normal;
-  font-size: 36px;
-  line-height: 40px;
+  @media (min-width: @tablet) {
+    padding: 0;
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-bottom: 47px;
+  }
 }
 
 .guide__list {
   list-style: none;
   margin: 0;
   padding: 0;
+
+  //
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet) {
+    justify-content: space-between;
+  }
 }
 
 .guide__item {
   position: relative;
+  display: flex;
+
+  color: @special-dark-grey;
+  font-family: @arial;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+
+  padding-bottom: 20px;
+
+  @media (min-width: @tablet) {
+    flex-direction: column;
+
+    font-size: 16px;
+    line-height: 24px;
+
+    width: 250px;
+    min-height: 280px;
+    margin-bottom: 5px;
+    margin-right: 73px;
+    padding-top: 40px;
+  }
+
+  &::before {
+    display: block;
+    content: "";
+    width: 60px;
+    height: 60px;
+    background-repeat: no-repeat;
+    background-position: 50%;
+    background-size: 50px 50px;
+    background-color: @basic-green;
+    padding-right: 60px;
+    margin-right: 20px;
+
+    @media (min-width: @tablet) {
+      width: 80px;
+      height: 80px;
+
+      padding-right: 80px;
+      margin-bottom: 31px;
+    }
+  }
+
+  &--leaf::before {
+    background-image: url("/img/advantage-leaf@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/advantage-leaf@2x.png");
+    }
+  }
+
+  &--powder::before {
+    background-image: url("/img/advantage-powder@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/advantage-powder@2x.png");
+    }
+  }
+
+  &--dining::before {
+    background-image: url("/img/advantage-dining@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/advantage-dining@2x.png");
+    }
+  }
+
+  &--clock::before {
+    background-image: url("/img/advantage-clock@1x.png");
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("/img/advantage-clock@2x.png");
+    }
+  }
+}
+
+.guide__title {
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 40px;
+  font-family: @basic-fonts;
+
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 38px;
+
+  @media (min-width: @tablet) {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 60px;
+    line-height: 60px;
+
+    padding-top: 45px;
+    //padding-bottom: 64px;
+  }
+}
+
+.guide__number {
+  display: none;
+
+  @media (min-width: @tablet) {
+    display: block;
+    position: absolute;
+    z-index: -1;
+
+    font-family: @basic-fonts;
+    font-size: 280px;
+    line-height: 1;
+    color: @basic-grey;
+
+    left: 115px;
+    top: 0;
+  }
+}
+
+/*.guide__item {
+  position: relative;
 
   display: flex;
   padding-bottom: 20px;
+
 
   &::before {
     content: "";
@@ -37,7 +161,7 @@
   &--leaf::before {
     content: "";
 
-    background-image: url("./../../img/advantage-leaf@1x.png");
+    background-image: url("/img/advantage-leaf@1x.png");
     background-repeat: no-repeat;
     background-position: center;
     width: 30px;
@@ -45,7 +169,7 @@
   }
 
   &--powder::before {
-    background-image: url("./../../img/advantage-powder@1x.png");
+    background-image: url("/img/advantage-powder@1x.png");
     background-repeat: no-repeat;
     background-position: center;
     width: 29px;
@@ -53,7 +177,7 @@
   }
 
   &--dining::before {
-    background-image: url("./../../img/advantage-dining@1x.png");
+    background-image: url("/img/advantage-dining@1x.png");
     background-repeat: no-repeat;
     background-position: center;
     width: 23px;
@@ -61,7 +185,7 @@
   }
 
   &--clock::before {
-    background-image: url("./../../img/advantage-clock@1x.png");
+    background-image: url("/img/advantage-clock@1x.png");
     background-repeat: no-repeat;
     background-position: center;
     widows: 32px;
@@ -77,4 +201,4 @@
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
-}
+}*/

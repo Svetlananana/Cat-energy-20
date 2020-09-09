@@ -1,9 +1,19 @@
 .catalog {
   background-color: @white;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+    padding-left: 30px;
+    padding-right: 30px;
+  }
 }
 
 .catalog__card {
-  border-bottom: 1px solid @grey-border;
+  position: relative;
+  border-bottom: 1px solid @basic-grey;
   padding-left: 20px;
   padding-right: 20px;
   margin: 0;
@@ -12,31 +22,52 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-wrap: wrap;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    border: none;
+
+    width: 324px;
+    min-height: 511px;
+
+    padding: 0;
+    margin-bottom: 60px;
+
+    background: linear-gradient(to top, @special-grey 430px, @white 430px);
+  }
 }
 
 .catalog__img {
-  width: 140px;
-  height: 112px;
-  margin: 0;
+  width: 50%;
+  min-height: 112px;
+
+  @media (min-width: @tablet) {
+    width: 100%;
+    height: 200px;
+  }
 }
 
 .catalog__img-food {
   width: 100%;
-  height: auto;
-  object-fit: cover;
-}
+  min-height: auto;
+  object-fit: contain;
 
-.catalog__table-link {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 20px;
-  color: @special-grey-catalog;
-  text-transform: uppercase;
+  @media (min-width: @tablet) {
+    width: 100%;
+    max-height: 200px;
+
+    position: absolute;
+
+    bottom: 303px;
+  }
 }
 
 .catalog__table-title {
   text-transform: uppercase;
+  color: @special-grey-catalog;
   font-size: 16px;
   font-weight: 400;
   line-height: 20px;
@@ -45,11 +76,30 @@
   margin: 0;
   padding-top: 18px;
   padding-bottom: 18px;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 24px;
+
+    max-width: none;
+
+    text-align: center;
+    margin: 0 90px;
+    padding: 0;
+    padding-top: 30px;
+  }
 }
 
 .catalog__button {
   .button;
   margin-bottom: 20px;
+
+  @media (min-width: @tablet) {
+    width: 248px;
+
+    margin: 0;
+    padding: 12px 0 12px;
+  }
 }
 
 //table
@@ -63,31 +113,61 @@
   line-height: 16px;
   font-family: @arial;
   color: @special-dark-grey;
+  padding-bottom: 22px;
 
   display: flex;
-  align-self: flex-end;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 16px;
+
+    padding: 0 36px;
+    padding-top: 14px;
+    padding-bottom: 33px;
+  }
 }
 
-.catalog__table-weight,
-.catalog__table-flavor,
-.catalog__table-cost {
+.catalog__table-item {
   display: flex;
   justify-content: space-between;
   min-width: 140px;
+
+  @media (min-width: @tablet) {
+    min-width: 252px;
+
+    border-bottom: 1px solid @grey-border-value;
+
+    padding-bottom: 8px;
+    padding-top: 7px;
+  }
 }
 
-.catalog__table {
-  padding-bottom: 22px;
-}
+//card-more
 
-.catalog__card-wrap {
+.catalog__card-more {
+  position: relative;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   text-align: center;
 
-  margin: 0 auto;
   padding: 26px 0 25px;
+
+  border-bottom: 1px solid @basic-grey;
+
+  @media (min-width: @tablet) {
+    background-color: @white;
+    border: 1px solid @basic-grey;
+
+    width: 324px;
+    max-height: 429px;
+    margin-top: 82px;
+
+    padding: 0 77px;
+
+    justify-content: start;
+  }
 }
 
 .catalog__card-title {
@@ -99,8 +179,15 @@
   line-height: 20px;
 
   padding: 0;
-  padding-top: 23px;
+  padding-top: 53px;
   margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 22px;
+
+    padding: 49px 0 23px;
+  }
 }
 
 .catalog__card-text {
@@ -115,12 +202,26 @@
   padding-top: 8px;
   padding-bottom: 23px;
   margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 18px;
+
+    padding: 0;
+    padding-bottom: 85px;
+  }
 }
 
 .catalog__card-button {
   .button;
   background-color: @basic-grey;
   color: @special-dark-grey;
+
+  @media (min-width: @tablet) {
+    width: 249px;
+
+    padding: 12px 0 12px;
+  }
 
   &:hover {
     background-color: @special-grey-button;
@@ -132,6 +233,31 @@
   }
 }
 
-.catalog__card-img {
-  fill: rgb(211, 211, 211); //это просто иконка? не интерактивная?
+.catalog__card-plus {
+  display: block;
+  position: relative;
+  width: 30px;
+
+  @media (min-width: @tablet) {
+    width: 60px;
+    height: 60px;
+
+    margin-top: 52px;
+  }
+}
+
+.catalog__card-plus:before,
+.catalog__card-plus:after {
+  position: absolute;
+  content: "";
+  height: 30px;
+  width: 2px;
+  background-color: rgb(211, 211, 211);
+
+  @media (min-width: @tablet) {
+    height: 60px;
+  }
+}
+.catalog__card-plus:before {
+  transform: rotate(90deg);
 }

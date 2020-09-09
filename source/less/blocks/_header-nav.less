@@ -1,3 +1,13 @@
+.header-nav__wrapper {
+  background-color: @white;
+  color: @black;
+
+  @media (min-width: @tablet) {
+    border-bottom: none;
+    align-items: flex-end;
+  }
+}
+
 .header-nav__toggle {
   position: absolute;
   z-index: 2;
@@ -11,6 +21,14 @@
 
   width: 64px;
   height: 64px;
+
+  @media (min-width: @tablet) {
+    display: none;
+  }
+
+  @media (min-width: @desktop) {
+    display: none;
+  }
 }
 
 /* Бургер */
