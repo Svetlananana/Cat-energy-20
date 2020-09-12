@@ -1,23 +1,31 @@
-/*.header-page__wrap {
+
+.header-page__wrap {
   background-color: @white;
-  color: @black;
 
-  padding-top: 10px;
-  padding-left: 20px;
-  padding-bottom: 17px;
-
-  @media (min-width: @tablet) {
-    border-bottom: none;
-
-    padding-top: 24px;
-    padding-left: 30px;
-    padding-bottom: 0;
-  }
-}*/
-.header-page {
   @media (min-width: @tablet) {
     display: flex;
     flex-wrap: nowrap;
+    justify-content: space-between;
+
+    padding-left: 30px;
+    padding-right: 29px;
+    padding-top: 24px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 54px;
+    padding-left: 110px;
+    padding-right: 109px;
+  }
+
+  @media (min-width: @desktop) {
+    &--index {
+    padding-left: 110px;
+    padding-right: 110px;
+    padding-top: 53px;
+
+    background-color: transparent;
+    }
   }
 }
 
@@ -33,7 +41,12 @@
     width: 174px;
     height: 52px;
 
-    margin: 24px 94px 0 30px;
+    margin: 0;
+
+    @media (min-width: @desktop) {
+      width: 202px;
+      height: 59px;
+    }
   }
 }
 

@@ -6,6 +6,16 @@
     display: flex;
     justify-content: flex-start;
   }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+    padding-left: 110px;
+    margin-top: 69px;
+
+    flex-direction: column;
+
+    max-width: 476px;
+  }
 }
 
 .result__list {
@@ -21,7 +31,10 @@
   @media (min-width: @tablet) {
     padding-top: 54px;
     flex-wrap: nowrap;
-    //justify-content: space-between;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
   }
 }
 
@@ -89,6 +102,10 @@
     &--width {
       width: 142px;
     }
+
+    @media (min-width: @desktop) {
+      background-color: @basic-grey;
+    }
   }
 }
 
@@ -105,6 +122,13 @@
     padding-left: 160px;
     margin: 0;
   }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+    padding-top: 55px;
+
+    flex-direction: row;
+  }
 }
 
 .result__price {
@@ -115,9 +139,14 @@
 
   margin: 0;
   padding-top: 35px;
+  //margin-bottom: 45px;
 
   &:first-of-type {
     padding-right: 3px;
+
+    @media (min-width: @desktop) {
+      padding-right: 63px;
+    }
   }
 
   @media (min-width: @tablet) {
@@ -126,5 +155,9 @@
 
     padding: 0;
     padding-top: 9px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
   }
 }

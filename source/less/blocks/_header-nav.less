@@ -1,11 +1,15 @@
 .header-nav__wrapper {
-  background-color: @white;
   color: @black;
 
   @media (min-width: @tablet) {
     border-bottom: none;
     align-items: flex-end;
   }
+
+  @media (min-width: @desktop) {
+    background-color: transparent;
+  }
+
 }
 
 .header-nav__toggle {
@@ -31,7 +35,8 @@
   }
 }
 
-/* Бургер */
+// Бургер
+
 .header-nav--closed .header-nav__toggle::before {
   content: "";
   position: absolute;
@@ -51,6 +56,7 @@
 }
 
 /* Иконка закрытия меню */
+
 .header-nav--opened .header-nav__toggle {
   &::before,
   &::after {

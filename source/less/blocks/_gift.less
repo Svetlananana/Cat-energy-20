@@ -4,6 +4,10 @@
   @media (min-width: @tablet) {
     padding: 69px 30px 76px;
   }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+  }
 }
 
 .gift__wrap {
@@ -29,31 +33,38 @@
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
 
-    @media (min-width: @tablet) {
-      background-image: url("../img/gift-photo-tablet@1x.jpg");
-      width: 708px;
-      height: 200px;
+  @media (min-width: @tablet) {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    width: 708px;
+    height: 200px;
 
-      flex-direction: row;
-      justify-content: space-between;
+    flex-direction: row;
+    justify-content: space-between;
 
-      @media (min-resolution: 2dppx) {
-        background-image: url("../img/gift-photo-tablet@2x.jpg");
-      }
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop) {
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    width: 245px;
+    height: 285px;
+    margin: 0;
+    flex-direction: column;
+    justify-content: none;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
     }
   }
 }
 
 .gift__present-svg {
-  //position: absolute;
-  //display: block;
-  //margin-top: 63px;
-
   margin-bottom: 48px;
   fill: @white;
-
-  //margin: auto;
 
   @media (min-width: @tablet) {
     margin: 0;
@@ -61,6 +72,11 @@
     height: auto;
 
     margin-left: 78px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0;
+    margin-top: 56px;
   }
 }
 
@@ -70,7 +86,7 @@
   font-size: 16px;
   line-height: 20px;
   color: @white;
-  width: 161px;
+  max-width: 161px;
 
   padding-bottom: 43px;
   margin: 0;
@@ -78,9 +94,16 @@
   @media (min-width: @tablet) {
     font-size: 16px;
     line-height: 20px;
+    text-align: left;
 
     padding: 0;
     margin-right: 124px;
-    text-align: left;
+  }
+
+  @media (min-width: @desktop) {
+    text-align: center;
+
+    padding-bottom: 42px;
+    margin: 0;
   }
 }

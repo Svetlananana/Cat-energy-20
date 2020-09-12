@@ -1,4 +1,4 @@
-.extra__wrap {
+.extra__wrap-title {
   width: 100%;
 
   &--line {
@@ -17,7 +17,37 @@
       @media (min-width: @tablet) {
         top: 31px;
       }
+
+      @media (min-width: @desktop) {
+        top: 36px;
+      }
     }
+  }
+}
+
+.extra__wrapper {
+  @media (min-width: @desktop) {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 80px 110px 86px;
+  }
+}
+
+.extra__products {
+  padding: 0 20px;
+
+  @media (min-width: @tablet) {
+    padding: 0 30px;
+    padding-top: 80px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-rigt: 0;
+    padding-top: 0;
+
+    height: 288px;
+
   }
 }
 
@@ -44,30 +74,48 @@
     line-height: 36px;
 
     width: 411px;
-
+    padding-bottom: 0;
     padding-top: 8px;
-    padding-bottom: 80px;
     padding-left: 37px;
     margin-left: 37px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 13px;
+    padding-left: 40px;
+    margin-left: 70px;
+
+
+    width: 410px;
+
   }
 }
 
 .extra__list {
   border-bottom: 1px solid @grey-border;
-  margin: 0 20px;
 
   @media (min-width: @tablet) {
     border-bottom: 1px solid @grey-border;
     border-left: 1px solid @grey-border;
     border-right: 1px solid @grey-border;
 
-    margin: 0 30px;
     padding: 26px 38px 0 37px;
 
     display: flex;
     flex-wrap: wrap;
 
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop) {
+    text-align: center;
+    align-items: center;
+    width: 896px;
+
+    border-left: none;
+    border-right: none;
+
+    padding: 15px 1px;
   }
 }
 
@@ -93,6 +141,12 @@
     padding: 0;
     padding-bottom: 28px;
   }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+    min-width: 245px;
+    text-align: left;
+  }
 }
 
 .extra__table {
@@ -112,11 +166,17 @@
     line-height: 20px;
 
     display: flex;
-    justify-content: flex-end;
 
     margin: 0;
     padding-top: 4px;
     padding-bottom: 24px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+
+    display: block;
+    text-align: center;
   }
 }
 
@@ -127,6 +187,10 @@
 
   @media (min-width: @tablet) {
     min-width: 226px;
+  }
+
+  @media (min-width: @desktop) {
+    min-width: 286px;
   }
 }
 
@@ -139,5 +203,13 @@
 
     padding: 11px 0 11px;
     margin-bottom: 28px;
+  }
+
+  @media (min-width: @desktop) {
+    width: 244px;
+    height: 40px;
+    // padding: 10px 0 10px;
+    padding: 0;
+    margin: 0;
   }
 }

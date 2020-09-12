@@ -1,15 +1,23 @@
+.adds {
+  position: relative;
+}
+
 .adds__wrap {
   display: flex;
-
   justify-content: space-around;
   align-items: center;
 
+  background-color: @white;
   padding-top: 28px;
   padding-bottom: 22px;
   padding-left: 19px;
 
   &--grey {
     background-color: @basic-grey;
+
+    @media (min-width: @desktop) {
+      background-color: @white;
+    }
   }
 
   @media (min-width: @tablet) {
@@ -19,6 +27,18 @@
     padding-bottom: 50px;
 
     justify-content: space-between;
+  }
+
+  @media (min-width: @desktop) {
+    position: absolute;
+    min-height: 201px;
+    width: 570px;
+
+    padding-left: 76px;
+    padding-right: 89px;
+
+    top: 95px;
+    left: 110px;
   }
 }
 
@@ -51,6 +71,11 @@
     text-align: right;
     width: 30%;
     margin: 0;
+  }
+
+  @media (min-width: @desktop) {
+    text-align: left;
+    width: 40%;
   }
 }
 
