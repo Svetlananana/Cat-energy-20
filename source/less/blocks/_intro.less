@@ -11,6 +11,8 @@
 
   @media (min-width: @desktop) {
     min-height: 585px;
+    width: 100%;
+   // max-width: 1440px;
   }
 }
 
@@ -23,6 +25,8 @@
   @media (min-width: @desktop) {
     padding-top: 111px;
     padding-left: 190px;
+
+    width: 100%;
   }
 
   &::before {
@@ -56,13 +60,14 @@
       display: block;
       position: absolute;
       background-image: url("../img/index-background-desktop@1x.jpg");
+      background-size: cover;
       width: 50%;
-      //width: 720px;
       height: 696px;
       margin: 0;
 
       right: 0;
       left: 50%;
+
       top: -113px;
 
       @media (min-resolution: 2dppx) {
