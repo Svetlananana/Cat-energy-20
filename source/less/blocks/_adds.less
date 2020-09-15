@@ -1,15 +1,45 @@
+.adds {
+  position: relative;
+}
+
 .adds__wrap {
   display: flex;
-
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
-  padding-top: 28px;
-  padding-bottom: 22px;
-  padding-left: 19px;
+  background-color: @white;
+  padding-top: 15px;
+  padding-bottom: 11px;
+  padding-left: 20px;
 
-  &--gray {
+  &--grey {
     background-color: @basic-grey;
+
+    @media (min-width: @desktop) {
+      background-color: @white;
+    }
+  }
+
+  @media (min-width: @tablet) {
+    padding-top: 63px;
+    padding-left: 71px;
+    padding-right: 74px;
+    padding-bottom: 58px;
+
+    justify-content: space-between;
+  }
+
+  @media (min-width: @desktop) {
+    position: absolute;
+    min-height: 201px;
+    width: 570px;
+
+    padding-left: 76px;
+    padding-right: 78px;
+    padding-top: 62px;
+
+    top: 95px;
+    left: 110px;
   }
 }
 
@@ -20,6 +50,14 @@
   text-transform: uppercase;
 
   margin: 0;
+  padding-right: 7px;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 24px;
+
+    width: 30%;
+  }
 }
 
 .adds__adress {
@@ -27,4 +65,72 @@
   font-style: normal;
   font-size: 14px;
   line-height: 20px;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 20px;
+
+    text-align: right;
+    width: 30%;
+    margin: 0;
+  }
+
+  @media (min-width: @desktop) {
+    text-align: left;
+    width: 40%;
+  }
+}
+
+.adds__city {
+  @media (min-width: @tablet) {
+    display: block;
+    margin-top: 20px;
+  }
+}
+
+.adds__map {
+  background-color: @basic-grey;
+  height: 362px;
+  border: none;
+
+  background-image: url("../img/map-pin.png"),
+    url("../img/bg-map-mobile@1x.png");
+  background-repeat: no-repeat;
+  background-position: 131px 136px, 0 0;
+  background-size: 64px 53px, 100%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/map-pin.png"),
+      url("../img/bg-map-mobile@2x.png");
+  }
+
+  @media (min-width: @tablet) {
+    height: 400px;
+    background-image: url("../img/map-pin.png"),
+      url("../img/bg-map-tablet@1x.png");
+    background-position: 319px 146px, 0 0;
+    background-size: 128px 106px, 100%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/map-pin.png"),
+        url("../img/bg-map-tablet@2x.png");
+    }
+
+    @media (min-width: @desktop) {
+      @media (min-resolution: 2dppx) {
+        background-image: url("../img/map-pin.png"),
+          url("../img/bg-map-desktop@2x.png");
+        background-position: 902px 131px, 0 0;
+        background-size: 124px 101px, 100%;
+      }
+
+      background-image: url("../img/map-pin.png"),
+        url("../img/bg-map-desktop@1x.png");
+    }
+  }
+}
+
+.adds__map-iframe {
+  width: 100%;
+  height: 100%;
 }

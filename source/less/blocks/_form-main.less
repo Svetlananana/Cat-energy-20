@@ -1,5 +1,33 @@
+.form-main__wrap {
+  @media (min-width: @desktop) {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 80px;
+    padding-top: 66px;
+    padding-bottom: 69px;
+    padding-left: 111px;
+    padding-right: 110px;
+  }
+}
+
 .form-main__title {
   .title;
+
+  @media (min-width: @tablet) {
+    font-size: 60px;
+    line-height: 60px;
+
+    padding: 0;
+    padding-top: 64px;
+    padding-left: 29px;
+    padding-bottom: 54px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 73px;
+    padding-left: 110px;
+    padding-bottom: 56px;
+  }
 }
 
 .form-main__text {
@@ -13,8 +41,18 @@
   padding-left: 20px;
   padding-right: 30px;
   margin: 0;
-}
 
-.form-main__wrap {
-  //padding: 39px 20px 32px 20px;
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 30px;
+
+    padding: 0;
+    padding-left: 70px;
+    padding-right: 320px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 110px;
+    padding-right: 1000px;
+  }
 }

@@ -1,11 +1,17 @@
 .gift {
-  padding: 0 20px;
+  padding: 39px 20px 35px;
+
+  @media (min-width: @tablet) {
+    padding: 68px 30px 76px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+  }
 }
 
 .gift__wrap {
   position: relative;
-  margin: 39px 0 35px;
-
 
   display: flex;
   flex-direction: column;
@@ -13,20 +19,65 @@
   text-align: center;
   justify-content: flex-end;
 
-  background-image: url("./../../img/gift-photo-mobile@1x.jpg");
+  background-image: url("../img/gift-photo-mobile@1x.jpg");
   background-color: @basic-green;
+
   width: 280px;
   height: 289px;
+
   background-repeat: no-repeat;
   background-position: top center;
   background-size: contain;
+
+  margin: 0 auto;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/gift-photo-mobile@2x.jpg");
+  }
+
+  @media (min-width: @tablet) {
+    background-image: url("../img/gift-photo-tablet@1x.jpg");
+    width: 708px;
+    height: 200px;
+
+    flex-direction: row;
+    justify-content: space-between;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-tablet@2x.jpg");
+    }
+  }
+
+  @media (min-width: @desktop) {
+    background-image: url("../img/gift-photo-desktop@1x.jpg");
+    width: 245px;
+    height: 289px;
+    margin: 0;
+    flex-direction: column;
+    justify-content: none;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/gift-photo-desktop@2x.jpg");
+    }
+  }
 }
 
-.gift__present {
-  position: absolute;
+.gift__present-svg {
+  margin-bottom: 48px;
   fill: @white;
 
-  top: 58px;
+  @media (min-width: @tablet) {
+    margin: 0;
+    width: 80px;
+    height: auto;
+
+    margin-left: 78px;
+  }
+
+  @media (min-width: @desktop) {
+    margin: 0;
+    margin-top: 56px;
+  }
 }
 
 .gift__text {
@@ -35,8 +86,24 @@
   font-size: 16px;
   line-height: 20px;
   color: @white;
-  width: 161px;
+  max-width: 161px;
 
-  padding-bottom: 43px;
+  padding-bottom: 42px;
   margin: 0;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 20px;
+    text-align: left;
+
+    padding: 0;
+    margin-right: 124px;
+  }
+
+  @media (min-width: @desktop) {
+    text-align: center;
+
+    padding-bottom: 42px;
+    margin: 0;
+  }
 }

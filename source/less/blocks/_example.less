@@ -1,9 +1,47 @@
 .example {
+  position: relative;
   background-color: @special-grey;
+
+  @media (min-width: @tablet) {
+    border-top: 1px solid rgb(230, 230, 230);
+    background: linear-gradient(to bottom, @white 57%, @basic-grey 57%);
+  }
+
+  @media (min-width: @desktop) {
+    display: flex;
+    justify-content: space-between;
+
+    border: none;
+    min-height: 667px;
+    background: linear-gradient(@white 0%, @white 205px, @basic-grey 200px, @basic-grey 100%);
+
+    &::before {
+      content: "";
+      position: absolute;
+      z-index: 1;
+      top: 0;
+      right: 0;
+      width: 395px;
+      height: 100%;
+      background: linear-gradient(@white 0%, @white 205px, @special-grey 200px, @special-grey 100%);
+    }
+  }
 }
 
 .example__wrap {
   padding: 0 20px;
+  padding-top: 29px;
+
+  @media (min-width: @tablet) {
+    padding: 0 30px;
+    padding-top: 43px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+    padding-top: 69px;
+    padding-left: 110px;
+  }
 }
 
 .example__title {
@@ -12,14 +50,41 @@
   line-height: 40px;
 
   margin: 0;
-  padding: 27px 0 33px;
+  padding-bottom: 33px;
+
+  @media (min-width: @tablet) {
+    font-size: 60px;
+    line-height: 60px;
+
+    padding: 0;
+    padding-bottom: 63px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+  }
 }
 
 .example__description {
   font-family: @arial;
+  color: @special-dark-grey;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
 
   margin: 0;
+  padding-right: 5px;
+
+  @media (min-width: @tablet) {
+    font-size: 16px;
+    line-height: 24px;
+
+    padding-right: 10px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 0;
+    padding-top: 147px;
+    max-width: 436px;
+  }
 }

@@ -5,35 +5,119 @@
   flex-direction: column;
   margin: 0;
   padding: 0 20px;
-}
 
-.social__footer-logo {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @media (min-width: @tablet) {
+    flex-direction: row;
+    justify-content: space-between;
 
-  border-bottom: 1px solid @grey-border;
+    padding: 0;
+    min-height: 150px;
+    padding-top: 53px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  @media (min-width: @desktop) {
+    padding: 56px 110px 58px;
+  }
 }
 
 .social__footer-link {
+  display: flex;
+  justify-content: center;
+
+  border-bottom: 1px solid @grey-border;
+
   padding-top: 39px;
   padding-bottom: 32px;
 
   color: @special-grey-icon;
+
+  &:hover,
+  &:focus {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
+
+  @media (min-width: @tablet) {
+    border: none;
+    padding: 0;
+    margin-top: 8px;
+    width: 128px;
+    height: 24px;
+  }
 }
+
+//Соц. сети
 
 .social__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: baseline;
   list-style: none;
 
-  padding: 20px 0;
-  margin: 0;
+  padding: 22px 0 21px;
+  padding-right: 13px;
+  margin: 0 auto;
 
-  border-bottom: 1px solid @grey-border;
+  width: 138px;
+
+  @media (min-width: @tablet) {
+    border: none;
+    padding: 0;
+    padding-top: 2px;
+    margin: 0;
+    margin-left: 24px;
+    width: 130px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 0;
+  }
 }
 
-.social__item {
-  padding: 0 30px;
+.social__link {
+  fill: @special-grey-icon;
+
+  &:hover,
+  &:focus {
+    fill: @basic-green;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+}
+
+.social__svg {
+  position: relative;
+
+  @media (min-width: @tablet) {
+    &--vkontakte {
+      width: 32px;
+      height: 25px;
+    }
+
+    &--instagram {
+      width: 22px;
+      height: 23px;
+    }
+
+    &--facebook {
+      width: 26px;
+      height: 29px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &--facebook {
+      width: 21px;
+      height: 29px;
+
+      top: 2px;
+    }
+  }
 }
