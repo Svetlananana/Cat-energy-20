@@ -12,8 +12,8 @@
     justify-content: space-between;
 
     border: none;
-    min-height: 656px;
-    background: linear-gradient(@white 0%, @white 195px, @basic-grey 195px, @basic-grey 100%);
+    min-height: 667px;
+    background: linear-gradient(@white 0%, @white 205px, @basic-grey 200px, @basic-grey 100%);
 
     &::before {
       content: "";
@@ -21,17 +21,16 @@
       z-index: 1;
       top: 0;
       right: 0;
-      //width: calc(50vw - 720px + 395px); //386
       width: 395px;
       height: 100%;
-      background: linear-gradient(@white 0%, @white 195px, @special-grey 195px, @special-grey 100%);
+      background: linear-gradient(@white 0%, @white 205px, @special-grey 200px, @special-grey 100%);
     }
   }
 }
 
 .example__wrap {
   padding: 0 20px;
-  padding-top: 27px;
+  padding-top: 29px;
 
   @media (min-width: @tablet) {
     padding: 0 30px;
@@ -74,6 +73,7 @@
   line-height: 18px;
 
   margin: 0;
+  padding-right: 5px;
 
   @media (min-width: @tablet) {
     font-size: 16px;
@@ -84,7 +84,7 @@
 
   @media (min-width: @desktop) {
     padding: 0;
-    padding-top: 146px;
+    padding-top: 147px;
     max-width: 436px;
   }
 }

@@ -1,13 +1,25 @@
 .copyright {
-  padding: 22px 19px;
+  padding-top: 19px;
+  padding-bottom: 23px;
+
+  border-top: 1px solid @grey-border;
 
   @media (min-width: @tablet) {
+    border: none;
     padding: 0;
+    padding-right: 2px;
+
     margin: 0;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 3px;
+    padding-left: 1px;
   }
 }
 
 .copyright__link {
+  position: relative;
   font-family: @arial;
   font-style: normal;
   font-weight: normal;
@@ -20,24 +32,42 @@
 
   color: @special-dark-grey;
 
-  &:active {
-    color: rgba(68, 68, 68, 0.3);
-  }
-
   &-icon {
+    position: relative;
     fill: @special-grey-icon;
-  }
 
-  &-icon:hover {
-    fill: @basic-green;
-  }
+    left: 3px;
+    top: 2px;
 
-  &-icon:active {
-    fill: @basic-green;
-    opacity: 0.3;
+    width: 32px;
+    height: auto;
+
+    @media (min-width: @tablet) {
+      width: 30px;
+      left: 1px;
+    }
+
+    @media (min-width: @desktop) {
+      left: 2px;
+    }
   }
 
   @media (min-width: @tablet) {
-    width: 163px;
+    min-width: 163px;
+  }
+
+  &:active {
+    opacity: 0.4;
+
+    .copyright__link-icon {
+      fill: @basic-green;
+      opacity: 0.4;
+    }
+  }
+
+  &:hover {
+    .copyright__link-icon {
+      fill: @basic-green;
+    }
   }
 }

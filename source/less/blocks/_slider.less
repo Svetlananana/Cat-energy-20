@@ -1,9 +1,9 @@
 .slider {
-  padding-top: 45px;
+  padding-top: 35px;
 
   @media (min-width: @tablet) {
     padding: 0 30px;
-    padding-top: 84px;
+    padding-top: 81px;
 
     width: 768px;
     margin: 0 auto;
@@ -34,18 +34,23 @@
   @media (min-width: @desktop) {
     min-height: 517px;
     width: 690px;
-    top: 11px;
+    top: 16px;
   }
 }
 
 .slider__img {
+  width: 100%;
+  height: auto;
+  margin: 0;
+
   &--after {
     display: none;
   }
 
   @media (min-width: @tablet) {
     width: 690px;
-    margin-left: 10px;
+    margin-left: 17px;
+    margin-top: 6px;
 
     &--before {
       position: absolute;
@@ -83,28 +88,29 @@
   display: flex;
   justify-content: space-between;
 
-  width: 70%;
+  width: 61%;
 
   margin: 0 auto;
-  padding: 23px 0 39px;
+  padding: 30px 0 36px;
 
   @media (min-width: @tablet) {
     justify-content: center;
 
     width: 100%;
 
-    padding-bottom: 67px;
-    padding-top: 10px;
+    padding-bottom: 70px;
+    padding-top: 2px;
   }
 
   @media (min-width: @desktop) {
     padding: 0;
-    padding-bottom: 67px;
+    padding-bottom: 70px;
     padding-right: 25px;
   }
 }
 
 .slider__parameter {
+  position: relative;
   border: none;
   background: inherit;
   font-family: inherit;
@@ -121,7 +127,8 @@
   @media (min-width: @tablet) {
     font-size: 20px;
     line-height: 30px;
-    margin: 0 20px;
+    margin-left: 21px;
+    margin-right: 23px;
 
     border-bottom: 1px dotted @grey-border-value;
 
@@ -138,6 +145,11 @@
       border-bottom: 1px solid rgba(0, 0, 0, 0);
     }
   }
+
+  @media (min-width: @desktop) {
+    margin-left: 19px;
+    margin-right: 26px;
+  }
 }
 
 .slider__toggle {
@@ -149,7 +161,7 @@
   cursor: pointer;
 
   margin: 0;
-  margin-top: 5px;
+  margin-top: 4px;
 
   @media (min-width: @tablet) {
     position: relative;
@@ -163,6 +175,10 @@
     &:focus {
       outline: none;
     }
+  }
+
+  @media (min-width: @desktop) {
+    margin-top: 15px;
   }
 }
 

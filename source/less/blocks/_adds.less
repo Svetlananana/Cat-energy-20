@@ -4,13 +4,13 @@
 
 .adds__wrap {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   align-items: center;
 
   background-color: @white;
-  padding-top: 28px;
-  padding-bottom: 22px;
-  padding-left: 19px;
+  padding-top: 15px;
+  padding-bottom: 11px;
+  padding-left: 20px;
 
   &--grey {
     background-color: @basic-grey;
@@ -21,10 +21,10 @@
   }
 
   @media (min-width: @tablet) {
-    padding-top: 66px;
+    padding-top: 63px;
     padding-left: 71px;
-    padding-right: 72px;
-    padding-bottom: 50px;
+    padding-right: 74px;
+    padding-bottom: 58px;
 
     justify-content: space-between;
   }
@@ -35,7 +35,8 @@
     width: 570px;
 
     padding-left: 76px;
-    padding-right: 89px;
+    padding-right: 78px;
+    padding-top: 62px;
 
     top: 95px;
     left: 110px;
@@ -49,10 +50,11 @@
   text-transform: uppercase;
 
   margin: 0;
+  padding-right: 7px;
 
   @media (min-width: @tablet) {
     font-size: 20px;
-    line-height: 27px;
+    line-height: 24px;
 
     width: 30%;
   }
@@ -89,6 +91,7 @@
 .adds__map {
   background-color: @basic-grey;
   height: 362px;
+  border: none;
 
   background-image: url("../img/map-pin.png"),
     url("../img/bg-map-mobile@1x.png");

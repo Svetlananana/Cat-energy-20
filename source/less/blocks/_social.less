@@ -9,11 +9,16 @@
   @media (min-width: @tablet) {
     flex-direction: row;
     justify-content: space-between;
-    padding: 55px 30px 60px;
+
+    padding: 0;
+    min-height: 150px;
+    padding-top: 53px;
+    padding-left: 30px;
+    padding-right: 30px;
   }
 
   @media (min-width: @desktop) {
-    padding: 57px 110px 58px;
+    padding: 56px 110px 58px;
   }
 }
 
@@ -40,26 +45,37 @@
   @media (min-width: @tablet) {
     border: none;
     padding: 0;
+    margin-top: 8px;
+    width: 128px;
+    height: 24px;
   }
 }
 
-/*Соц. сети*/
+//Соц. сети
 
 .social__list {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: baseline;
   list-style: none;
 
-  padding: 20px 0;
-  margin: 0;
+  padding: 22px 0 21px;
+  padding-right: 13px;
+  margin: 0 auto;
 
-  border-bottom: 1px solid @grey-border;
+  width: 138px;
 
   @media (min-width: @tablet) {
     border: none;
     padding: 0;
-    padding-top: 5px;
+    padding-top: 2px;
+    margin: 0;
+    margin-left: 24px;
+    width: 130px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-top: 0;
   }
 }
 
@@ -76,31 +92,32 @@
   }
 }
 
-.social__link--insagram {
-  margin-left: 36px;
-  margin-right: 36px;
-
-  @media (min-width: @tablet) {
-    margin-left: 27px;
-    margin-right: 27px;
-  }
-}
-
 .social__svg {
+  position: relative;
+
   @media (min-width: @tablet) {
     &--vkontakte {
-      width: 30px;
-      height: 22px;
+      width: 32px;
+      height: 25px;
     }
 
     &--instagram {
-      width: 23px;
+      width: 22px;
       height: 23px;
     }
 
     &--facebook {
-      width: 13px;
-      height: 27px;
+      width: 26px;
+      height: 29px;
+    }
+  }
+
+  @media (min-width: @desktop) {
+    &--facebook {
+      width: 21px;
+      height: 29px;
+
+      top: 2px;
     }
   }
 }
