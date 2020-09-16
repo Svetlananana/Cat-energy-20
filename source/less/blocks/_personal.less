@@ -7,6 +7,7 @@
   margin: 0;
 
   display: flex;
+  flex-direction: column;
 
   @media (min-width: @tablet) {
     padding: 66px 70px 0 71px;
@@ -107,6 +108,7 @@
 
 .personal__radio-tipe {
   display: flex;
+  flex-direction: column;
 
   border: none;
   font-family: @basic-fonts;
@@ -309,7 +311,9 @@
 
     padding-left: 111px;
     padding-right: 110px;
-    width: 100%;
+
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
@@ -453,13 +457,19 @@
 
 .personal__comment {
   padding: 0 20px;
+  margin: 0 auto;
 
   @media (min-width: @tablet) {
-    padding: 0 70px 65px;
+    padding: 0;
+    padding-left: 70px;
+    padding-right: 70px;
   }
 
   @media (min-width: @desktop) {
     padding: 0 110px;
+
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
@@ -518,6 +528,8 @@
   text-transform: uppercase;
   color: @special-dark-grey;
   outline: 0;
+
+  width: 100%;
 
   &::placeholder {
     color: @special-dark-grey;
@@ -589,7 +601,7 @@
   max-width: 185px;
   margin: 0;
   padding-top: 27px;
-  padding-bottom: 38px;
+  padding-bottom: 23px;
   padding-left: 19px;
 
   @media (min-width: @tablet) {
@@ -599,8 +611,8 @@
     max-width: 292px;
 
     margin-left: 30px;
-    padding-top: 0;
-    padding-bottom: 61px;
+    padding-top: 64px;
+    padding-bottom: 46px;
     padding-left: 40px;
   }
 
@@ -608,6 +620,13 @@
     margin-left: 70px;
     padding-bottom: 63px;
     padding-top: 65px;
+  }
+}
+
+.persunal__add-wrap {
+  @media (min-width: @desktop) {
+    max-width: 1440px;
+    margin: 0 auto;
   }
 }
 
@@ -626,11 +645,13 @@
 .personal__add-list {
   list-style: none;
   padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
 
   @media (min-width: @tablet) {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    // flex-direction: row;
+    //flex-wrap: wrap;
     justify-content: space-between;
 
     padding-left: 70px;
@@ -644,9 +665,7 @@
 }
 
 .personal__add-item {
-  @media (min-width: @tablet) {
-    width: 221px;
-  }
+  width: 221px;
 }
 
 .personal__add-item:not(:last-child) {
@@ -741,7 +760,7 @@
   display: flex;
   flex-direction: column;
   text-align: center;
-  padding: 39px 20px 32px;
+  padding: 22px 20px 32px;
 
   @media (min-width: @tablet) {
     flex-direction: row;
@@ -751,10 +770,13 @@
     padding-left: 71px;
     padding-right: 177px;
     padding-bottom: 72px;
-    padding-top: 17px;
+    padding-top: 1px;
   }
 
   @media (min-width: @desktop) {
+    max-width: 1440px;
+    margin: 0 auto;
+
     justify-content: start;
 
     padding-top: 66px;
