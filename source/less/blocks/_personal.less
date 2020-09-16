@@ -563,6 +563,195 @@
 
 //add
 
+.personal__add-wrap-title {
+  width: 100%;
+
+  &--line {
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: "";
+      z-index: -1;
+      background-color: @basic-green;
+      width: 100%;
+      height: 2px;
+
+      top: 41px;
+
+      @media (min-width: @tablet) {
+        top: 86px;
+      }
+
+      @media (min-width: @desktop) {
+        top: 89px;
+      }
+    }
+  }
+}
+
+.personal__add-title {
+  position: relative;
+  font-family: @basic-fonts;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 26px;
+  background-color: @white;
+
+  max-width: 185px;
+  margin: 0;
+  padding-top: 27px;
+  padding-bottom: 23px;
+  padding-left: 19px;
+
+  @media (min-width: @tablet) {
+    font-size: 36px;
+    line-height: 36px;
+
+    max-width: 292px;
+
+    margin-left: 30px;
+    padding-top: 64px;
+    padding-bottom: 46px;
+    padding-left: 40px;
+  }
+
+  @media (min-width: @desktop) {
+    margin-left: 70px;
+    padding-bottom: 63px;
+    padding-top: 65px;
+  }
+}
+
+.persunal__add-wrap {
+  @media (min-width: @desktop) {
+    max-width: 1440px;
+    margin: 0 auto;
+  }
+}
+
+.personal__add {
+  border: none;
+  padding: 0;
+  margin: 0;
+
+  & .personal__add-wrap {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+}
+
+.personal__add-list {
+  list-style: none;
+  padding: 0 20px;
+  display: flex;
+  flex-wrap: wrap;
+
+  @media (min-width: @tablet) {
+    display: flex;
+    justify-content: space-between;
+
+    padding-left: 70px;
+    padding-right: 137px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-left: 110px;
+    padding-right: 134px;
+  }
+}
+
+.personal__add-item {
+  width: 221px;
+}
+
+.personal__add-item:not(:last-child) {
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet) {
+    padding-bottom: 42px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-bottom: 0;
+  }
+}
+
+.personal__checkbox {
+  position: relative;
+  font-family: @basic-fonts;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+
+  padding-left: 46px;
+
+  @media (min-width: @tablet) {
+    font-size: 20px;
+    line-height: 30px;
+
+    padding-left: 59px;
+    width: 221px;
+  }
+}
+
+.personal__checkbox:not(:last-child) {
+  padding-bottom: 25px;
+
+  @media (min-width: @tablet) {
+    padding-bottom: 42px;
+  }
+
+  @media (min-width: @desktop) {
+    padding-bottom: 0;
+  }
+}
+
+.personal__checkbox-button {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  border: 1px solid @grey-border-value;
+
+  margin-left: -46px;
+  top: -5px;
+
+  @media (min-width: @tablet) {
+    width: 40px;
+    height: 40px;
+
+    margin-left: -59px;
+  }
+}
+
+.personal__add-input:checked + .personal__checkbox-button::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 8px;
+  width: 11px;
+  height: 18px;
+  border-right: 2px solid @basic-green;
+  border-bottom: 2px solid @basic-green;
+  transform: skew(5deg) rotate(45deg);
+
+  @media (min-width: @tablet) {
+    top: 8px;
+    left: 13px;
+  }
+}
+
+.personal__add-input:hover + .personal__checkbox-button,
+.personal__add-input:focus + .personal__checkbox-button {
+  border-color: rgb(186, 186, 186);
+}
+
+.personal__checkbox:active {
+  opacity: 0.3;
+}
+
 //personal__submit
 
 .personal__submit {
