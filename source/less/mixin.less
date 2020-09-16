@@ -17,6 +17,7 @@
 
   color: @white;
   background-color: @basic-green;
+  cursor: pointer;
 
   &:hover {
     background-color: @special-green;
@@ -40,7 +41,8 @@
 }
 
 .input__form() {
-  border: 1px solid rgb(231, 231, 231);
+  border: none;
+  box-shadow: inset 0 0 0 1px rgb(231, 231, 231);
 
   font-family: @basic-fonts;
   font-weight: normal;
@@ -55,13 +57,13 @@
   }
 
   &:hover {
-    border: 1px solid @grey-border-value;
+    box-shadow: inset 0 0 0 1px @grey-border-value;
     outline: 0;
   }
 
   &:focus,
   &:active {
-    border: none;
+    border: transparent;
     box-shadow: inset 0 0 0 2px @special-dark-grey;
 
     + .personal__svg {
