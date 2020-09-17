@@ -1,6 +1,6 @@
 //field
 
-.personal {
+.personal__info {
   border: none;
 
   padding: 39px 20px 9px 19px;
@@ -188,9 +188,13 @@
   }
 }
 
-.personal__radio-shape:focus + .personal__radio-button,
 .personal__radio-shape:hover + .personal__radio-button {
   box-shadow: 0 0 0 1px rgb(186, 186, 186);
+}
+
+.personal__radio-shape:focus + .personal__radio-button {
+  box-shadow: 0 0 0 1px rgb(186, 186, 186);
+  outline: rgb(27, 102, 199) solid 2px;
 }
 
 .personal__radio-shape:disabled + .personal__radio-button {
@@ -645,7 +649,7 @@
 }
 
 .personal__add-item {
-  width: 221px;
+  min-width: 221px;
 }
 
 .personal__add-item:not(:last-child) {
@@ -676,7 +680,6 @@
     line-height: 30px;
 
     padding-left: 59px;
-    width: 221px;
   }
 }
 
@@ -726,9 +729,13 @@
   }
 }
 
-.personal__add-input:hover + .personal__checkbox-button,
+.personal__add-input:hover + .personal__checkbox-button {
+  border-color: rgb(186, 186, 186);
+}
+
 .personal__add-input:focus + .personal__checkbox-button {
   border-color: rgb(186, 186, 186);
+  outline: rgb(27, 102, 199) solid 2px;
 }
 
 .personal__checkbox:active {
